@@ -1,0 +1,7 @@
+vendor/
+Vagrantfile
+.idea/
+.vagrant/
+latest.sql
+node_modules
+public

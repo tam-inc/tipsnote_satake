@@ -1,0 +1,28 @@
+{
+  "name": "tipsnote",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^6.3.5",
+    "browser-sync": "^2.7.13",
+    "browsersync-ssi": "^0.2.4",
+    "del": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.0",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^1.1.0",
+    "gulp-if": "^2.0.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.5.3",
+    "run-sequence": "^1.1.5"
+  }
+}
