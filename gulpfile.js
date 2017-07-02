@@ -30,7 +30,7 @@ var gulp = require('gulp'),
 gulp.task('server', function () {
     browserSync({
         server: {
-            baseDir: ['./public'],
+            baseDir: ['./'],
         },
         ghostMode: {
             clicks: false,
@@ -53,7 +53,7 @@ gulp.task('jade', function () {
             doctype: 'html',
             pretty: true
         }))
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('./'));
 });
 
 /***************************************************************************
@@ -75,7 +75,7 @@ gulp.task('sass', function () {
         }))
         .pipe(postcss(processors))  // ベンダープレフィックスを自動付与
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('public/css'));
+        .pipe(gulp.dest('./css'));
 });
 
 /***************************************************************************
@@ -94,7 +94,7 @@ gulp.task('scripts', function () {
         ]
     )
         .pipe(concat('bundle.js'))
-        .pipe(gulp.dest('./public/js/'));
+        .pipe(gulp.dest('./js/'));
 });
 
 
@@ -111,19 +111,19 @@ gulp.task('minify-jade', function () {
             doctype: 'html',
             pretty: false //htmlを圧縮
         }))
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('minify-js', ['scripts'], function () {
     gulp.src('./public/js/bundle.js')
         .pipe(uglify())//jsを圧縮 option:ライセンス表記は圧縮しない
-        .pipe(gulp.dest('./public/js/'))
+        .pipe(gulp.dest('./js/'))
 });
 
 gulp.task('minify-css', ['sass'], function () {
     return gulp.src('./public/css/style.css')
         .pipe(csso())//cssを圧縮
-        .pipe(gulp.dest('./public/css/'))
+        .pipe(gulp.dest('./css/'))
 });
 
 /***************************************************************************
@@ -145,7 +145,7 @@ gulp.task('rebuild', function () {
         ], {
             dos: true
         })
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('./'));
 });
 
 /***************************************************************************
@@ -168,7 +168,7 @@ gulp.task('clean',
 
 gulp.task('copy', function () {
     gulp.src(['resources/.htaccess'])
-       .pipe(gulp.dest('public'))
+       .pipe(gulp.dest('./'))
 });
 
 gulp.task('p', ['clean'], function (cb) {
