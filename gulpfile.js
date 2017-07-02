@@ -177,7 +177,7 @@ gulp.task('p', ['clean'], function (cb) {
         'jade',
         'sass',
         'scripts',
-        'minify-jade',
+        // 'minify-jade',
         'minify-css',
         'minify-js',
         'rebuild',
