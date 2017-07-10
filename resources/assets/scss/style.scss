@@ -1,25 +1,38 @@
 @charset "UTF-8";
-img{
+img {
   width: 100%;
   height: auto;
 }
 
-.body-inner{
+.width-1400 {
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1400px;
+  }
+}
+
+.body-inner {
   position: absolute;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: -1;
 }
+
 .grid-exsample-1 {
   background: #FFCBED;
-  padding-top:30px;
+  padding-top: 30px;
   text-align: center;
   height: 3000px;
 }
 
-div{
-  border:none!important;
+div {
+  border: none !important;
   text-align: center;
 }
